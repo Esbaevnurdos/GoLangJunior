@@ -1,0 +1,10 @@
+POST http://localhost:8080/events
+content-type: application/json
+authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFsbWFzQGV4YXBtbGUuY29tIiwiZXhwIjoxNzIxNjM4MzY5LCJ1c2VySWQiOjd9.1zPqEAAS8R5cX-6pMiMnvg2WfwSnumiizkV4qP0NqVM
+
+{
+    "name": "Almas",
+    "description": "almas test",
+    "location": "aslmasben",
+    "dateTime": "2025-01-01T15:30:00Z"
+}
