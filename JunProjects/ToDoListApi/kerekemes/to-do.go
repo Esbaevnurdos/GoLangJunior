@@ -64,10 +64,12 @@ func getTasks(c *gin.Context) {
 	var tasks []Task
 	for rows.Next() {
 		var task Task
-		if err := rows.Scan(&task.ID, &task.Title, &task.Status); err != nil {
-			c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
-			return
-		}
+    err := rows.Scan(&task.ID, &task.Title, &task.Status)
+    if err != nil {
+	    c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+	    return
+}
+
 		tasks = append(tasks, task)
 	}
 
